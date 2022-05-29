@@ -1,0 +1,19 @@
+.base-mid{
+    width: 100vw;
+    font-size: 2rem;
+    min-height: 3em;
+    background-color: brown;
+}
+.base-button{
+    width: 100vw;
+}
+.img-mid{
+    width: 25vw;
+    height: auto;
+}
+.button-abrir{
+    font-size: 25vw;
+    width: 100vw;
+    /* background-color: seagreen; */
+    /* color */
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador DO Banco de Dados</title>
+    <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/topo.css">
+    <link rel="stylesheet" href="./css/bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <style>
+        body{
+            width: 100vw;
+            height: 100%;
+            background-color: rgb(27, 27, 27);
+            color: white;
+            /* display: flex; */
+            /* flex:auto; */
+        }
+    </style>
+</head>
+<body>
+    <header id="topo" class="topo d-flex">
+        <div class="d-flex content height-100 align-items-center">
+            <a href="https://github.com/Nicolassmaniotto">
+                <img src="./img/logo.svg"  class="logo" alt="logo" srcset="">
+            </a>
+        </div>
+        <div class="topo text-topo justify-content-around align-items-center width-100 ">
+            <h1 class="d-flex justify-content-center align-items-center width-100 ">
+                Gerenciador de Banco de JSONs
+            </h1>
+            <a href="javascript:list-db()" class="d-flex justify-content-between align-items-left">
+                <div>
+                    USER
+                </div>
+                <div>
+                    ./..~home/document/db/USER
+                </div>
+            </a>
+            <a href="javascript:#USER">
+                LOGIN
+            </a>
+        </div>
+    </header>
+    <div id="dados">
+        <div id="id${i}">
+            <div id="id-i">id:55</div>
+            <div id="${chaveName}::id${i}">
+                chaveName:<div>
+                    value
+                </div>
+            </div>
+        </div>
+        <div id="id${i+1}">
+            <div id="id-i+1">id:55</div>
+            <div id="${chaveName}::id${i+1}">
+                chaveName:<div>
+                    values:["vida","que","segue"]
+                </div>
+            </div>
+        </div> 
+    </div>
+    <script src="./js/fetch.js"></script>
+    <script>
+        async function jsonTable(pos,data){
+            try{
+                if(!(data = JSON.parse(data))) throw 'not json fomat'
+                data.forEach(element => {
+                    document.getElementById(pos).innerHTML += element;
+                });
+                return data
+            }catch(err){
+                (err)=>{
+                    // console.log(err)
+                    return err
+                }
+            }
+        }
+        var teste = {
+            user:'user',
+            data:{
+                item:[1,2.3,45,8]
+            }
+        }
+        var teste = JSON.stringify(teste)
+        jsonTable(teste).then
+        async function getDataDB(dbName,func,pos){
+            let url = 'https://localhost:5500' //alterar para o servidor
+            let token = '' //token padrão apenas para teste alterar para rand ao usar fora da rede local
+            try{
+                let data = await fetchPost(url,data,options = null).then(
+                ).catch((err)=>{if(err) throw err})
+            }catch(err){
+                let data = await fetchPost(url,data,option = null).then(
+
+                ).catch((err)=>{
+                    document.getElementById(pos).innerHTML = err
+                })
+            }
+
+        }
+    </script>
+
+</body>
+</html>

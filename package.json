@@ -1,0 +1,17 @@
+{
+  "name": "teste-db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "clear && node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "“Nicolas <“nicolasantoniosmaniotto@gmail.com”>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "fs-json-db": "0.0.6"
+  }
+}
